@@ -1,6 +1,6 @@
 <template>
-  <div id="app">
-    <router-view/>
+  <div class="column-item fit">
+    <slot></slot>
   </div>
 </template>
 
@@ -9,10 +9,10 @@
   import Component from 'vue-class-component'
 
   @Component
-  export default class App extends Vue {
+  export default class Column extends Vue {
   }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 </style>

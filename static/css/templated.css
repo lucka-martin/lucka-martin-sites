@@ -675,57 +675,57 @@
 			display: none;
 		}
 
-/* Image */
+/* column item */
 
-	.image {
+	.column-item {
 		border-radius: 4px;
 		border: 0;
 		display: inline-block;
 		position: relative;
 	}
 
-		.image img {
+		.column-item * {
 			border-radius: 4px;
 			display: block;
 		}
 
-		.image.left, .image.right {
+		.column-item.left, .column-item.right {
 			max-width: 40%;
 		}
 
-			.image.left img, .image.right img {
+			.column-item.left img, .column-item.right img {
 				width: 100%;
 			}
 
-		.image.left {
+		.column-item.left {
 			float: left;
 			margin: 0 1.5em 1em 0;
 			top: 0.25em;
 		}
 
-		.image.right {
+		.column-item.right {
 			float: right;
 			margin: 0 0 1em 1.5em;
 			top: 0.25em;
 		}
 
-		.image.fit {
+		.column-item.fit {
 			display: block;
 			margin: 0 0 2em 0;
 			width: 100%;
 		}
 
-			.image.fit img {
+			.column-item.fit img {
 				width: 100%;
 			}
 
-		.image.main {
+		.column-item.main {
 			display: block;
 			margin: 0 0 3em 0;
 			width: 100%;
 		}
 
-			.image.main img {
+			.column-item.main img {
 				width: 100%;
 			}
 
@@ -918,7 +918,7 @@
 		column-gap: 1em;
 	}
 
-		.columns .image {
+		.columns .column-item {
 			position: relative;
 			display: inline-block;
 			margin: 0 0 .5em;
@@ -926,7 +926,7 @@
 			overflow: hidden;
 		}
 
-			.columns .image img {
+			.columns .column-item img {
 				-moz-transition: -moz-transform 0.2s ease-in-out;
 				-webkit-transition: -webkit-transform 0.2s ease-in-out;
 				-ms-transition: -ms-transform 0.2s ease-in-out;
@@ -935,7 +935,7 @@
 				-webkit-transform: translate3D(0, 0, 0);
 			}
 
-			.columns .image:hover img {
+			.columns .column-item:hover img {
 				-moz-transform: scale(1.1);
 				-webkit-transform: scale(1.1);
 				-ms-transform: scale(1.1);
@@ -974,7 +974,7 @@
 			margin: 0 auto;
 		}
 
-		#preview .image {
+		#preview .column-item {
 			margin: 0;
 		}
 
@@ -986,7 +986,7 @@
 			display: flex;
 		}
 
-			#preview.vertical .inner .image {
+			#preview.vertical .inner .column-item {
 				-ms-flex: 1 1 calc(100% - 50px);
 				flex: 1 1 calc(100% - 50px);
 				max-width: 100%;
