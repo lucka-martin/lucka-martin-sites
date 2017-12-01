@@ -4,58 +4,58 @@
     <div id="main">
       <Columns>
         <!-- Column 1 (horizontal, vertical, horizontal, vertical) -->
-        <ColumnItem>
+        <ColumnItem :aspectRatio="16/10">
           <a href="detail1.html"><img src="images/pic01.jpg" alt="" /></a>
         </ColumnItem>
-        <ColumnItem>
+        <ColumnItem :aspectRatio="11/16">
           <a href="detail1.html"><img src="images/pic02.jpg" alt="" /></a>
         </ColumnItem>
-        <ColumnItem>
+        <ColumnItem :aspectRatio="16/10">
           <a href="detail1.html"><img src="images/pic03.jpg" alt="" /></a>
         </ColumnItem>
-        <ColumnItem>
+        <ColumnItem :aspectRatio="11/16">
           <a href="detail1.html"><img src="images/pic04.jpg" alt="" /></a>
         </ColumnItem>
 
         <!-- Column 2 (vertical, horizontal, vertical, horizontal) -->
-        <ColumnItem>
+        <ColumnItem :aspectRatio="11/16">
           <a href="detail1.html"><img src="images/pic06.jpg" alt="" /></a>
         </ColumnItem>
-        <ColumnItem>
+        <ColumnItem :aspectRatio="16/10">
           <a href="detail1.html"><img src="images/pic05.jpg" alt="" /></a>
         </ColumnItem>
-        <ColumnItem>
+        <ColumnItem :aspectRatio="11/16">
           <a href="detail1.html"><img src="images/pic08.jpg" alt="" /></a>
         </ColumnItem>
-        <ColumnItem>
+        <ColumnItem :aspectRatio="16/10">
           <a href="detail1.html"><img src="images/pic07.jpg" alt="" /></a>
         </ColumnItem>
 
         <!-- Column 3 (horizontal, vertical, horizontal, vertical) -->
-        <ColumnItem>
+        <ColumnItem :aspectRatio="16/10">
           <a href="detail1.html"><img src="images/pic09.jpg" alt="" /></a>
         </ColumnItem>
-        <ColumnItem>
+        <ColumnItem :aspectRatio="11/16">
           <a href="detail1.html"><img src="images/pic12.jpg" alt="" /></a>
         </ColumnItem>
-        <ColumnItem>
+        <ColumnItem :aspectRatio="16/10">
           <a href="detail1.html"><img src="images/pic11.jpg" alt="" /></a>
         </ColumnItem>
-        <ColumnItem>
+        <ColumnItem :aspectRatio="11/16">
           <a href="detail1.html"><img src="images/pic10.jpg" alt="" /></a>
         </ColumnItem>
 
         <!-- Column 4 (vertical, horizontal, vertical, horizontal) -->
-        <ColumnItem>
+        <ColumnItem :aspectRatio="11/16">
           <a href="detail1.html"><img src="images/pic13.jpg" alt="" /></a>
         </ColumnItem>
-        <ColumnItem>
+        <ColumnItem :aspectRatio="16/10">
           <a href="detail1.html"><img src="images/pic14.jpg" alt="" /></a>
         </ColumnItem>
-        <ColumnItem>
+        <ColumnItem :aspectRatio="11/16">
           <a href="detail1.html"><img src="images/pic15.jpg" alt="" /></a>
         </ColumnItem>
-        <ColumnItem>
+        <ColumnItem :aspectRatio="16/10">
           <a href="detail1.html"><img src="images/pic16.jpg" alt="" /></a>
         </ColumnItem>
       </Columns>
