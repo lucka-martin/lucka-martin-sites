@@ -13,8 +13,11 @@
 
   @Component
   export default class Columns extends Vue {
-    @Prop()
-    columns: number = 4;
+    @Prop({
+      type: Number,
+      default: 4
+    })
+    columns: number;
 
     get style () {
       return {
@@ -26,6 +29,3 @@
   }
 </script>
 
-<style lang="scss" scoped>
-
-</style>

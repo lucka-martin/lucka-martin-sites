@@ -1,5 +1,5 @@
 <template>
-  <div class="column-item fit">
+  <div>
     <slot></slot>
   </div>
 </template>
@@ -9,7 +9,10 @@
   import Component from 'vue-class-component'
 
   @Component
-  export default class Column extends Vue {
+  export default class MainLayout extends Vue {
   }
 </script>
 
+<style lang="scss" scoped>
+
+</style>

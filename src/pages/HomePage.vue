@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <MainLayout>
     <HomeButton></HomeButton>
     <div id="main">
       <Columns>
@@ -60,18 +60,20 @@
         </Column>
       </Columns>
     </div>
-  </div>
+  </MainLayout>
 </template>
 
 <script lang="ts">
   import Vue from 'vue'
   import Component from 'vue-class-component'
+  import MainLayout from '@/layouts/MainLayout.vue'
   import HomeButton from '@/components/HomeButton.vue'
   import Columns from '@/components/Columns.vue'
   import Column from '@/components/Column.vue'
 
   @Component({
     components: {
+      MainLayout,
       HomeButton,
       Columns,
       Column
@@ -81,6 +83,3 @@
   }
 </script>
 
-<style lang="scss" scoped>
-
-</style>
