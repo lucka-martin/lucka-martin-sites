@@ -1,7 +1,8 @@
 <template>
   <div class="card fit" :style="style">
     <div class="inside">
-      <slot></slot>
+      <slot name="front"></slot>
+      <slot name="back"></slot>
     </div>
   </div>
 </template>
