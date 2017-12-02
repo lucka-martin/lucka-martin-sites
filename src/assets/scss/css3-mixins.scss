@@ -1,4 +1,10 @@
-/* MIXINs */
+@mixin backface-visibility( $val : hidden ) {
+  -webkit-backface-visibility: $val;
+  -moz-backface-visibility: $val;
+  -o-backface-visibility: $val;
+  backface-visibility: $val;
+}
+
 @mixin transition( $val : ease 0.5s ) {
   -webkit-transition: $val;
   -moz-transition:$val;

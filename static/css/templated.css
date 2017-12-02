@@ -263,6 +263,10 @@
 		color: #e74c3c;
 	}
 
+  span {
+    color: #e74c3c;
+  }
+
 	strong, b {
 		color: #555;
 	}

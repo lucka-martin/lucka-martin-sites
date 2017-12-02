@@ -90,7 +90,10 @@ module.exports = {
         }, {
           loader: "sass-loader",
           options: {
-            includePaths: []
+            sourceMap: true,
+            includePaths: [
+              "./src/assets/scss/css3-mixins.scss"
+            ]
           }
         }]
       }
