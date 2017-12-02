@@ -677,55 +677,55 @@
 
 /* column item */
 
-	.column-item {
+	.columns > div {
 		border-radius: 4px;
 		border: 0;
 		display: inline-block;
 		position: relative;
 	}
 
-		.column-item * {
+		.columns > div * {
 			border-radius: 4px;
 			display: block;
 		}
 
-		.column-item.left, .column-item.right {
+		.columns > div.left, .columns > div.right {
 			max-width: 40%;
 		}
 
-			.column-item.left img, .column-item.right img {
+			.columns > div.left img, .columns > div.right img {
 				width: 100%;
 			}
 
-		.column-item.left {
+		.columns > div.left {
 			float: left;
 			margin: 0 1.5em 1em 0;
 			top: 0.25em;
 		}
 
-		.column-item.right {
+		.columns > div.right {
 			float: right;
 			margin: 0 0 1em 1.5em;
 			top: 0.25em;
 		}
 
-		.column-item.fit {
+		.columns > div.fit {
 			display: block;
-			margin: 0 0 2em 0;
+			margin: 0 0 1em 0;
 			width: 100%;
 		}
 
-			.column-item.fit img {
+			.columns > div.fit img {
 				width: 100%;
 			}
 
-		.column-item.main {
+		.columns > div.main {
 			display: block;
 			margin: 0 0 3em 0;
 			width: 100%;
 		}
 
-			.column-item.main img {
+			.columns > div.main img {
 				width: 100%;
 			}
 
@@ -918,7 +918,7 @@
 		column-gap: 1em;
 	}
 
-		.columns .column-item {
+		.columns > div {
 			position: relative;
 			display: inline-block;
 			margin: 0 0 .5em;
@@ -926,7 +926,7 @@
 			overflow: hidden;
 		}
 
-			.columns .column-item img {
+			.columns img {
 				-moz-transition: -moz-transform 0.2s ease-in-out;
 				-webkit-transition: -webkit-transform 0.2s ease-in-out;
 				-ms-transition: -ms-transform 0.2s ease-in-out;
@@ -935,7 +935,7 @@
 				-webkit-transform: translate3D(0, 0, 0);
 			}
 
-			.columns .column-item:hover img {
+			.columns div:hover img {
 				-moz-transform: scale(1.1);
 				-webkit-transform: scale(1.1);
 				-ms-transform: scale(1.1);
@@ -974,7 +974,7 @@
 			margin: 0 auto;
 		}
 
-		#preview .column-item {
+		#preview .columns > div {
 			margin: 0;
 		}
 
@@ -986,7 +986,7 @@
 			display: flex;
 		}
 
-			#preview.vertical .inner .column-item {
+			#preview.vertical .inner .columns > div {
 				-ms-flex: 1 1 calc(100% - 50px);
 				flex: 1 1 calc(100% - 50px);
 				max-width: 100%;

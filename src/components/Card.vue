@@ -1,5 +1,5 @@
 <template>
-  <div class="column-item fit" :style="style">
+  <div class="card fit" :style="style">
     <div class="inside">
       <slot></slot>
     </div>
@@ -29,7 +29,7 @@
 </script>
 
 <style lang="scss" scoped>
-  .column-item {
+  .card {
     position: relative;
     width: 100%;
     padding-top: 100%;
