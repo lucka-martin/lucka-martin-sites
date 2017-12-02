@@ -1,5 +1,5 @@
 <template>
-  <div class="card fit" :style="style">
+  <div class="card-component fit elevation-2" :style="style">
     <div class="card-content">
       <slot></slot>
     </div>
@@ -29,5 +29,5 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "./src/assets/scss/card.scss";
+  @import "../assets/scss/card.scss";
 </style>

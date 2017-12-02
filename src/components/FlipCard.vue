@@ -1,5 +1,5 @@
 <template>
-  <div class="card fit" :style="style">
+  <div class="card-component fit elevation-2" :style="style">
     <div class="card-content">
       <figure class="front">
         <slot name="front"></slot>
@@ -21,10 +21,10 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "./src/assets/scss/css3-mixins.scss";
-  @import "./src/assets/scss/card.scss";
+  @import "../assets/scss/css3-mixins.scss";
+  @import "../assets/scss/card.scss";
 
-  .card figure {
+  .card-component figure {
     position: absolute;
     display: block;
     height: 100%;
@@ -32,7 +32,7 @@
     text-align: center;
     font-weight: bold;
   }
-  .card figure {
+  .card-component figure {
     @include backface-visibility(hidden);
   }
 
@@ -43,11 +43,11 @@
     @include transform-origin(right center);
   }
 
-  .card:hover .card-content {
+  .card-component:hover .card-content {
     @include transform(translateX(-100%) rotateY(-180deg));
   }
 
-  .card .back {
+  .card-component .back {
     @include transform(rotateY(180deg));
   }
 </style>

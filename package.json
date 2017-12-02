@@ -19,7 +19,8 @@
     "vue": "^2.5.2",
     "vue-class-component": "^6.1.0",
     "vue-property-decorator": "^6.0.0",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vuetify": "^0.17.3"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
