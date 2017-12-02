@@ -33,11 +33,11 @@
   @import "../assets/scss/card.scss";
 
   .card-component .card-content {
+    @include transition();
     padding: 10px;
   }
 
   .card-component:hover .card-content {
     @include transform(scale(1.05));
-    @include transition();
   }
 </style>
