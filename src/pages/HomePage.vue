@@ -5,71 +5,69 @@
       <Columns :columns="4">
         <!-- Column 1 (horizontal, vertical, horizontal, vertical) -->
         <Card :aspectRatio="16/10" v-fade-in>
-          <a href="detail1.html"><img src="images/pic01.jpg" alt="" /></a>
+          <span>Lucka - foto</span>
         </Card>
         <FlipCard :aspectRatio="11/16" v-fade-in>
-          <a slot="front" href="detail1.html"><img src="images/pic02.jpg" alt="" /></a>
+          <a slot="front" href="detail1.html">FOTO</a>
           <span slot="back">ABC</span>
         </FlipCard>
         <FlipCard :aspectRatio="16/10" v-fade-in>
-          <a slot="front" href="detail1.html"><img src="images/pic03.jpg" alt="" /></a>
+          <span slot="front" href="detail1.html">Lucka - Promoce</span>
           <span slot="back">ABC</span>
         </FlipCard>
         <FlipCard :aspectRatio="11/16" v-fade-in>
-          <a slot="front" href="detail1.html"><img src="images/pic04.jpg" alt="" /></a>
-          <span slot="back">ABC</span>
+          <span slot="front">Prstynek - foto</span>
+          <span slot="back">Prstynek poloha</span>
         </FlipCard>
 
         <!-- Column 2 (vertical, horizontal, vertical, horizontal) -->
-        <Card :aspectRatio="11/16" v-fade-in>
-          <a href="detail1.html"><img src="images/pic06.jpg" alt="" /></a>
-        </Card>
-        <FlipCard :aspectRatio="16/10" v-fade-in>
-          <a slot="front" href="detail1.html"><img src="images/pic05.jpg" alt="" /></a>
-          <span slot="back">ABC</span>
-        </FlipCard>
         <FlipCard :aspectRatio="11/16" v-fade-in>
-          <a slot="front" href="detail1.html"><img src="images/pic08.jpg" alt="" /></a>
-          <span slot="back">ABC</span>
+          <span slot="front">Lucka - narozeni</span>
+          <span slot="back">Lucka - misto</span>
+        </FlipCard>
+        <Card :aspectRatio="16/10" v-fade-in>
+          <span>Gymuo</span> <!-- todo zoom in effect -->
+        </Card>
+        <FlipCard :aspectRatio="11/16" v-fade-in>
+          <span slot="front">Brno - VUT</span>
+          <span slot="back">Brno - MU</span>
         </FlipCard>
         <FlipCard :aspectRatio="16/10" v-fade-in>
-          <a slot="front" href="detail1.html"><img src="images/pic07.jpg" alt="" /></a>
+          <a slot="front" href="detail1.html">FOTO</a>
           <span slot="back">ABC</span>
         </FlipCard>
 
         <!-- Column 3 (horizontal, vertical, horizontal, vertical) -->
-        <Card :aspectRatio="16/10" v-fade-in>
-          <a href="detail1.html"><img src="images/pic09.jpg" alt="" /></a>
-        </Card>
-        <FlipCard :aspectRatio="11/16" v-fade-in>
-          <a slot="front" href="detail1.html"><img src="images/pic12.jpg" alt="" /></a>
-          <span slot="back">ABC</span>
-        </FlipCard>
         <FlipCard :aspectRatio="16/10" v-fade-in>
-          <a slot="front" href="detail1.html"><img src="images/pic11.jpg" alt="" /></a>
-          <span slot="back">ABC</span>
+          <span slot="front">Martin - narozeni</span>
+          <span slot="back">Martin - misto</span>
+        </FlipCard>
+        <Card :aspectRatio="11/16" v-fade-in>
+          <span>Cas</span>
+        </Card>
+        <FlipCard :aspectRatio="16/10" v-fade-in>
+          <span slot="front">Brno foto</span>
+          <span slot="back">Brno foto</span>
         </FlipCard>
         <FlipCard :aspectRatio="11/16" v-fade-in>
-          <a slot="front" href="detail1.html"><img src="images/pic10.jpg" alt="" /></a>
-          <span slot="back">ABC</span>
+          <span slot="front">Svatba - cas</span>
+          <span slot="back">Svatba - misto</span>
         </FlipCard>
 
         <!-- Column 4 (vertical, horizontal, vertical, horizontal) -->
         <Card :aspectRatio="11/16" v-fade-in>
-          <a href="detail1.html"><img src="images/pic13.jpg" alt="" /></a>
+          <span>Martin - foto</span>
         </Card>
         <FlipCard :aspectRatio="16/10" v-fade-in>
-          <a slot="front" href="detail1.html"><img src="images/pic14.jpg" alt="" /></a>
+          <span slot="front" href="detail1.html">Martin - promoce</span>
           <span slot="back">ABC</span>
         </FlipCard>
-        <FlipCard :aspectRatio="11/16" v-fade-in>
-          <a slot="front" href="detail1.html"><img src="images/pic15.jpg" alt="" /></a>
-          <span slot="back">ABC</span>
-        </FlipCard>
-        <FlipCard :aspectRatio="16/10" v-fade-in>
-          <a slot="front" href="detail1.html"><img src="images/pic16.jpg" alt="" /></a>
-          <span slot="back">ABC</span>
-        </FlipCard>
+        <Card :aspectRatio="11/16" v-fade-in>
+          <a href="detail1.html">FOTO</a>
+        </Card>
+        <Card :aspectRatio="16/10" v-fade-in>
+          <span>Svatba - Odpocet</span>
+        </Card>
       </Columns>
     </div>
   </MainLayout>

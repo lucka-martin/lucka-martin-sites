@@ -29,5 +29,15 @@
 </script>
 
 <style lang="scss" scoped>
+  @import "../assets/scss/css3-mixins";
   @import "../assets/scss/card.scss";
+
+  .card-component .card-content {
+    padding: 10px;
+  }
+
+  .card-component:hover .card-content {
+    @include transform(scale(1.05));
+    @include transition();
+  }
 </style>
