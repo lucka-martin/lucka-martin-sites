@@ -156,10 +156,7 @@
     }
 
     get yearsAsString () {
-      return duration(
-        {
-          years: this.years
-        })
+      return this.duration
         .locale(this.locale)
         .humanize(this.countdown && this.isFirstNonZero('years'))
     }

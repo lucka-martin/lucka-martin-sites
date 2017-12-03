@@ -1,6 +1,9 @@
-import { relativeTimeThreshold } from 'moment'
+import { relativeTimeThreshold, relativeTimeRounding, updateLocale } from 'moment'
+import cs from '../extensions/moment/locale/cs'
 
 export default () => {
+
+  updateLocale('cs', cs);
 
   const thresholds = {
     ss: 10, // a few seconds to seconds
@@ -14,4 +17,6 @@ export default () => {
   for (let threshold in thresholds) {
     relativeTimeThreshold(threshold, thresholds[threshold])
   }
+
+  relativeTimeRounding(Math.floor);
 }
