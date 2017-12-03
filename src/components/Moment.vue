@@ -1,13 +1,13 @@
 <template>
   <div class="moment">
     <div class="moment-content">
-      <div class="block">
+      <div v-if="display.includes('D')" class="block">
         <p class="digit">{{ dayAsString }}</p>
       </div>
-      <div class="block">
+      <div v-if="display.includes('d')" class="block">
         <p class="digit">{{ dateAsString }}</p>
       </div>
-      <div class="block">
+      <div v-if="display.includes('t')" class="block">
         <p class="digit">{{ timeAsString }}</p>
       </div>
     </div>
@@ -27,6 +27,11 @@
       type: Object
     })
     moment: Moment;
+    @Prop({
+      default: 'Ddt',
+      type: String
+    })
+    display: string;
     @Prop({
       default: 'cs',
       type: String
