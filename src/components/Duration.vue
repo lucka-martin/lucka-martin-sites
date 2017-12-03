@@ -27,20 +27,7 @@
   import Vue from 'vue'
   import Component from 'vue-class-component'
   import { Prop } from 'vue-property-decorator'
-  import { Moment, Duration, duration, relativeTimeThreshold } from 'moment'
-
-  const thresholds = {
-    ss: 1, // a few seconds to seconds
-    s: 60,  // seconds to minute
-    m: 60,  // minutes to hour
-    h: 24,  // hours to day
-    d: 28,  // days to month
-    M: 12   // months to year
-  }
-
-  for (let threshold in thresholds) {
-    relativeTimeThreshold(threshold, thresholds[threshold])
-  }
+  import { Moment, Duration, duration } from 'moment'
 
   @Component
   export default class DurationComponent extends Vue {
@@ -77,6 +64,28 @@
       }).locale(this.locale)
     }
 
+    get timeParts () : {[key: string]:number} {
+      return {
+        years: this.years,
+        months: this.months,
+        days: this.days,
+        hours: this.hours,
+        minutes: this.minutes,
+        seconds: this.seconds
+      }
+    }
+
+    isFirstNonZero (unit: string): boolean {
+      const parts = this.timeParts
+
+      for (const key in parts) {
+        if (parts[key] !== 0) {
+          return key === unit
+        }
+      }
+      return false
+    }
+
     get seconds () {
       return this.duration.seconds()
     }
@@ -87,7 +96,7 @@
           seconds: this.seconds
         })
         .locale(this.locale)
-        .humanize(this.countdown)
+        .humanize(this.countdown && this.isFirstNonZero('seconds'))
     }
 
     get minutes () {
@@ -100,7 +109,7 @@
           minutes: this.minutes
         })
         .locale(this.locale)
-        .humanize(this.countdown)
+        .humanize(this.countdown && this.isFirstNonZero('minutes'))
     }
 
     get hours () {
@@ -113,7 +122,7 @@
           hours: this.hours
         })
         .locale(this.locale)
-        .humanize(this.countdown)
+        .humanize(this.countdown && this.isFirstNonZero('hours'))
     }
 
     get days () {
@@ -126,7 +135,7 @@
           days: this.days
         })
         .locale(this.locale)
-        .humanize(this.countdown)
+        .humanize(this.countdown && this.isFirstNonZero('days'))
     }
 
     get months () {
@@ -139,7 +148,7 @@
           months: this.months
         })
         .locale(this.locale)
-        .humanize(this.countdown)
+        .humanize(this.countdown && this.isFirstNonZero('months'))
     }
 
     get years () {
@@ -152,7 +161,7 @@
           years: this.years
         })
         .locale(this.locale)
-        .humanize(this.countdown)
+        .humanize(this.countdown && this.isFirstNonZero('years'))
     }
   }
 </script>
@@ -170,6 +179,7 @@
   }
 
   .digit {
+    white-space: nowrap;
     text-align: center;
   }
 </style>
