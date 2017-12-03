@@ -66,10 +66,14 @@
           <span slot="back">ABC</span>
         </FlipCard>
         <Card :aspectRatio="11/16" v-fade-in>
-          <a href="detail1.html">FOTO</a>
+          <Duration :from="moment()"
+                    :to="moment('2018-09-01 10:00')"
+                    v-rerender="1000"
+                    countdown
+                    display="YMDhm"></Duration>
         </Card>
         <Card :aspectRatio="16/10" v-fade-in>
-          <span>Svatba - Odpocet</span>
+          <span>FOTO</span>
         </Card>
       </Columns>
     </div>

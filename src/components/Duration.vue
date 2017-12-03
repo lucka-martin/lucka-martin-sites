@@ -34,7 +34,7 @@
     s: 60,  // seconds to minute
     m: 60,  // minutes to hour
     h: 24,  // hours to day
-    d: 31,  // days to month
+    d: 28,  // days to month
     M: 12   // months to year
   }
 
@@ -64,10 +64,11 @@
       type: String
     })
     locale: string;
-
-    get past () {
-      return this.from.isBefore(this.to)
-    }
+    @Prop({
+      default: false,
+      type: Boolean
+    })
+    countdown: boolean;
 
     get duration (): Duration {
       return duration({
@@ -86,7 +87,7 @@
           seconds: this.seconds
         })
         .locale(this.locale)
-        .humanize(!this.past)
+        .humanize(this.countdown)
     }
 
     get minutes () {
@@ -99,7 +100,7 @@
           minutes: this.minutes
         })
         .locale(this.locale)
-        .humanize(!this.past)
+        .humanize(this.countdown)
     }
 
     get hours () {
@@ -112,7 +113,7 @@
           hours: this.hours
         })
         .locale(this.locale)
-        .humanize(!this.past)
+        .humanize(this.countdown)
     }
 
     get days () {
@@ -125,7 +126,7 @@
           days: this.days
         })
         .locale(this.locale)
-        .humanize(!this.past)
+        .humanize(this.countdown)
     }
 
     get months () {
@@ -138,7 +139,7 @@
           months: this.months
         })
         .locale(this.locale)
-        .humanize(!this.past)
+        .humanize(this.countdown)
     }
 
     get years () {
@@ -151,7 +152,7 @@
           years: this.years
         })
         .locale(this.locale)
-        .humanize(!this.past)
+        .humanize(this.countdown)
     }
   }
 </script>
