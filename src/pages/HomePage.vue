@@ -43,7 +43,10 @@
           <span slot="back">Martin - misto</span>
         </FlipCard>
         <Card :aspectRatio="11/16" v-fade-in>
-          <Duration :from="moment('2009-11-28')" :to="moment()" display="YMDhm"></Duration>
+          <Duration :from="moment('2009-11-28')"
+                    :to="moment()"
+                    v-rerender="1000"
+                    display="YMDhm"></Duration>
         </Card>
         <FlipCard :aspectRatio="16/10" v-fade-in>
           <span slot="front">Brno foto</span>
@@ -85,6 +88,7 @@
   import Duration from '@/components/Duration.vue'
 
   import fadeIn from '@/directives/fadeInDown'
+  import rerender from '@/directives/rerender'
 
   import moment, { duration, FromTo } from 'moment'
 
@@ -98,7 +102,8 @@
       Duration
     },
     directives: {
-      fadeIn
+      fadeIn,
+      rerender
     }
   })
   export default class HomePage extends Vue {
