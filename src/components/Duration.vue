@@ -27,7 +27,20 @@
   import Vue from 'vue'
   import Component from 'vue-class-component'
   import { Prop } from 'vue-property-decorator'
-  import { Moment, Duration, duration } from 'moment'
+  import { Moment, Duration, duration, relativeTimeThreshold } from 'moment'
+
+  const thresholds = {
+    ss: 1, // a few seconds to seconds
+    s: 60,  // seconds to minute
+    m: 60,  // minutes to hour
+    h: 24,  // hours to day
+    d: 31,  // days to month
+    M: 12   // months to year
+  }
+
+  for (let threshold in thresholds) {
+    relativeTimeThreshold(threshold, thresholds[threshold])
+  }
 
   @Component
   export default class DurationComponent extends Vue {
@@ -116,7 +129,7 @@
     }
 
     get months () {
-      return this.duration.months() + 1
+      return this.duration.months()
     }
 
     get monthsAsString () {
