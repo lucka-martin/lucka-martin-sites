@@ -1,4 +1,4 @@
-import { RouterOptions } from "vue-router";
-interface Vue {
-  router: RouterOptions
+declare module '*.vue' {
+  import { default as Vue } from 'vue';
+  export default Vue;
 }
