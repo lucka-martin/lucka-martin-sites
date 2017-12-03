@@ -4,7 +4,7 @@ class FadeInDownDirective implements DirectiveOptions {
 
   get inserted(): DirectiveFunction {
     return (el) => {
-      el.classList.add('fadeInDown');
+      el.classList.add('fadeIn');
       el.classList.add('animated');
       el.style.animationDelay = (Math.random() / 2) + "s"
     }

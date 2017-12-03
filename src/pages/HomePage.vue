@@ -2,15 +2,15 @@
   <MainLayout>
     <HomeButton></HomeButton>
     <div id="main">
-      <Columns :columns="4">
+      <Columns :columns="4" v-cloak>
         <!-- Column 1 (horizontal, vertical, horizontal, vertical) -->
-        <Card :aspectRatio="16/10" v-fade-in>
-          <span>Lucka - foto</span>
-        </Card>
         <FlipCard :aspectRatio="11/16" v-fade-in>
           <a slot="front" href="detail1.html">FOTO</a>
           <span slot="back">ABC</span>
         </FlipCard>
+        <Card :aspectRatio="16/10" v-fade-in>
+          <span>Lucka - foto</span>
+        </Card>
         <FlipCard :aspectRatio="16/10" v-fade-in>
           <span slot="front" href="detail1.html">Lucka - Promoce</span>
           <span slot="back">ABC</span>
@@ -21,12 +21,15 @@
         </FlipCard>
 
         <!-- Column 2 (vertical, horizontal, vertical, horizontal) -->
-        <FlipCard :aspectRatio="11/16" v-fade-in>
-          <span slot="front">Lucka - narozeni</span>
+        <FlipCard :aspectRatio="16/10" v-fade-in>
+          <Moment slot="front"
+                  :moment="moment('1993-06-08')"
+                  display="d">
+          </Moment>
           <span slot="back">Lucka - misto</span>
         </FlipCard>
-        <Card :aspectRatio="16/10" v-fade-in>
-          <span>Gymuo</span> <!-- todo zoom in effect -->
+        <Card :aspectRatio="11/16" v-fade-in>
+          <span>Gymuo</span>
         </Card>
         <FlipCard :aspectRatio="11/16" v-fade-in>
           <span slot="front">Brno - VUT</span>
@@ -39,7 +42,10 @@
 
         <!-- Column 3 (horizontal, vertical, horizontal, vertical) -->
         <FlipCard :aspectRatio="16/10" v-fade-in>
-          <span slot="front">Martin - narozeni</span>
+          <Moment slot="front"
+                  :moment="moment('1990-09-27')"
+                  display="d">
+          </Moment>
           <span slot="back">Martin - misto</span>
         </FlipCard>
         <Card :aspectRatio="11/16" v-fade-in>
@@ -96,7 +102,7 @@
   import Duration from '@/components/Duration.vue'
   import Moment from '@/components/Moment.vue'
 
-  import fadeIn from '@/directives/fadeInDown'
+  import fadeIn from '@/directives/fadeIn'
   import rerender from '@/directives/rerender'
 
   import moment, { duration, FromTo } from 'moment'
