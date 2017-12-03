@@ -34,6 +34,7 @@
   }
   .card-component figure {
     @include backface-visibility(hidden);
+    background: white;
   }
 
   .card-content {

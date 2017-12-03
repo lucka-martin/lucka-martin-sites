@@ -65,13 +65,17 @@
           <span slot="front" href="detail1.html">Martin - promoce</span>
           <span slot="back">ABC</span>
         </FlipCard>
-        <Card :aspectRatio="11/16" v-fade-in>
-          <Duration :from="moment()"
+        <FlipCard :aspectRatio="11/16" v-fade-in>
+          <Moment slot="front"
+                  :moment="moment('2018-09-01 10:00')">
+          </Moment>
+          <Duration slot="back"
+                    :from="moment()"
                     :to="moment('2018-09-01 10:00')"
                     v-rerender="1000"
                     countdown
                     display="YMDhm"></Duration>
-        </Card>
+        </FlipCard>
         <Card :aspectRatio="16/10" v-fade-in>
           <span>FOTO</span>
         </Card>
@@ -90,6 +94,7 @@
   import Card from '@/components/Card.vue'
   import FlipCard from '@/components/FlipCard.vue'
   import Duration from '@/components/Duration.vue'
+  import Moment from '@/components/Moment.vue'
 
   import fadeIn from '@/directives/fadeInDown'
   import rerender from '@/directives/rerender'
@@ -103,7 +108,8 @@
       Columns,
       Card,
       FlipCard,
-      Duration
+      Duration,
+      Moment
     },
     directives: {
       fadeIn,
