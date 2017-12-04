@@ -1,6 +1,13 @@
 <template>
   <div v-cloak>
-    <slot></slot>
+    <main>
+      <slot></slot>
+    </main>
+    <footer class="elevation-5">
+      <div>
+        © {{ new Date().getFullYear() }}
+      </div>
+    </footer>
   </div>
 </template>
 
@@ -14,5 +21,9 @@
 </script>
 
 <style lang="scss" scoped>
-
+  footer {
+    color: rgba(0,0,0,.87);
+    padding: 8px 16px;
+    text-align: right;
+  }
 </style>
