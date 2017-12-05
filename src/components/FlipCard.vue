@@ -4,7 +4,7 @@
       <figure class="front">
         <slot name="front"></slot>
       </figure>
-      <figure   class="back">
+      <figure class="back">
         <slot name="back" class="back"></slot>
       </figure>
     </div>
@@ -24,21 +24,17 @@
   @import "../assets/scss/css3-mixins.scss";
   @import "../assets/scss/card.scss";
 
-  .card-component figure {
-    position: absolute;
-    display: block;
-    height: 100%;
-    width: 100%;
-    text-align: center;
-    font-weight: bold;
-  }
+
   .card-component figure {
     @include backface-visibility(hidden);
-    background: white;
+    position: absolute;
+
   }
 
   .card-content {
-    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     @include transition(1s);
     @include transform-style(preserve-3d);
     @include transform-origin(right center);
