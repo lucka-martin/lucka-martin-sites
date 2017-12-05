@@ -34,6 +34,9 @@
 
   .card-component .card-content {
     @include transition();
+    justify-content: center;
+    display: flex;
+    align-items: center;
     padding: 10px;
   }
 
