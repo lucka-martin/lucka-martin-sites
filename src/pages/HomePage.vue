@@ -71,7 +71,7 @@
           <span slot="front" href="detail1.html">Martin - promoce</span>
           <span slot="back">ABC</span>
         </FlipCard>
-        <FlipCard :aspectRatio="11/16" v-fade-in>
+        <FlipCard :aspectRatio="11/16" v-fade-in class="wedding-arch">
           <Moment slot="front"
                   :moment="moment('2018-09-01 10:00')">
           </Moment>
