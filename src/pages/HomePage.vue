@@ -15,9 +15,14 @@
           <span slot="front" href="detail1.html">Lucka - Promoce</span>
           <span slot="back">ABC</span>
         </FlipCard>
-        <FlipCard :aspectRatio="11/16" v-fade-in>
-          <span slot="front">Prstynek - foto</span>
-          <span slot="back">Prstynek poloha</span>
+        <FlipCard :aspectRatio="11/16" v-fade-in class="front-fit">
+          <Background slot="front" url="/static/images/ring.jpg">
+          </Background>
+          <span slot="back">
+            <a @click="alert('asd')" href="https://earth.google.com/web/@45.8489444,10.86875,360.18591757a,709.16499163d,35y,0h,45t,0r/data=CjkaNxIxCgAZrp7ul6rsRkAhRHkwc8u8JUAqGzQ1wrA1MCc1Ni4yIk4gMTDCsDUyJzA3LjUiRRgCIAEoAg">
+              here
+            </a>
+          </span>
         </FlipCard>
 
         <!-- Column 2 (vertical, horizontal, vertical, horizontal) -->
@@ -95,11 +100,12 @@
 
   import Component from 'vue-class-component'
   import MainLayout from '@/layouts/MainLayout.vue'
-  import HomeButton from '@/components/HomeButton.vue'
-  import Columns from '@/components/Columns.vue'
+  import Background from '@/components/Background.vue'
   import Card from '@/components/Card.vue'
-  import FlipCard from '@/components/FlipCard.vue'
+  import Columns from '@/components/Columns.vue'
   import Duration from '@/components/Duration.vue'
+  import FlipCard from '@/components/FlipCard.vue'
+  import HomeButton from '@/components/HomeButton.vue'
   import Moment from '@/components/Moment.vue'
 
   import fadeIn from '@/directives/fadeIn'
@@ -109,11 +115,12 @@
 
   @Component({
     components: {
+      Background,
+      Card,
+      Columns,
+      FlipCard,
       MainLayout,
       HomeButton,
-      Columns,
-      Card,
-      FlipCard,
       Duration,
       Moment
     },

@@ -2,7 +2,7 @@
   <div class="card-component fit elevation-2" :style="style">
     <div class="card-content">
       <figure class="front">
-        <slot name="front"></slot>
+        <slot name="front" class="front"></slot>
       </figure>
       <figure class="back">
         <slot name="back" class="back"></slot>
@@ -20,15 +20,19 @@
   }
 </script>
 
+<style lang="scss">
+  .front-fit figure.front, .back-fit figure.back {
+    height: 100%;
+    width: 100%;
+  }
+</style>
 <style lang="scss" scoped>
   @import "../assets/scss/css3-mixins.scss";
   @import "../assets/scss/card.scss";
 
-
   .card-component figure {
     @include backface-visibility(hidden);
     position: absolute;
-
   }
 
   .card-content {
