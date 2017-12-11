@@ -32,7 +32,7 @@
                   :moment="moment('1993-06-08')"
                   display="d">
           </Moment>
-          <span slot="back">Lucka - misto</span>
+          <span slot="back">Ústí nad Orlicí</span>
         </FlipCard>
         <Card :aspectRatio="11/16" v-fade-in>
           <span>Gymuo</span>
@@ -52,7 +52,7 @@
                   :moment="moment('1990-09-27')"
                   display="d">
           </Moment>
-          <span slot="back">Martin - misto</span>
+          <span slot="back">Ústí nad Orlicí</span>
         </FlipCard>
         <Card :aspectRatio="11/16" v-fade-in>
           <Duration :from="moment('2009-11-28')"
