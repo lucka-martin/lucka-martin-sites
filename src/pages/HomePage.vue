@@ -15,15 +15,16 @@
           <span slot="front" href="detail1.html">Lucka - Promoce</span>
           <span slot="back">ABC</span>
         </FlipCard>
-        <FlipCard :aspectRatio="11/16" v-fade-in class="front-fit">
-          <Background slot="front" url="/static/images/ring.jpg">
-          </Background>
-          <span slot="back">
-            <a @click="alert('asd')" href="https://earth.google.com/web/@45.8489444,10.86875,360.18591757a,709.16499163d,35y,0h,45t,0r/data=CjkaNxIxCgAZrp7ul6rsRkAhRHkwc8u8JUAqGzQ1wrA1MCc1Ni4yIk4gMTDCsDUyJzA3LjUiRRgCIAEoAg">
-              here
-            </a>
-          </span>
-        </FlipCard>
+        <Card :aspectRatio="11/16" v-fade-in>
+          <img src="/static/images/ring.jpg"/>
+          <!--<Background slot="front" url="/static/images/ring.jpg">-->
+          <!--</Background>-->
+          <!--<span slot="back">-->
+            <!--<a href="https://earth.google.com/web/@45.8489444,10.86875,360.18591757a,709.16499163d,35y,0h,45t,0r/data=CjkaNxIxCgAZrp7ul6rsRkAhRHkwc8u8JUAqGzQ1wrA1MCc1Ni4yIk4gMTDCsDUyJzA3LjUiRRgCIAEoAg">-->
+              <!--here-->
+            <!--</a>-->
+          <!--</span>-->
+        </Card>
 
         <!-- Column 2 (vertical, horizontal, vertical, horizontal) -->
         <FlipCard :aspectRatio="16/10" v-fade-in>

@@ -37,7 +37,7 @@
     justify-content: center;
     display: flex;
     align-items: center;
-    padding: 10px;
+    overflow: hidden;
   }
 
   .card-component:hover .card-content {
