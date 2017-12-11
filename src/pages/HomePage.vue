@@ -27,7 +27,7 @@
         </Card>
 
         <!-- Column 2 (vertical, horizontal, vertical, horizontal) -->
-        <FlipCard :aspectRatio="16/10" v-fade-in>
+        <FlipCard :aspectRatio="16/10" v-fade-in class="baby-girl">
           <Moment slot="front"
                   :moment="moment('1993-06-08')"
                   display="d">
@@ -47,7 +47,7 @@
         </FlipCard>
 
         <!-- Column 3 (horizontal, vertical, horizontal, vertical) -->
-        <FlipCard :aspectRatio="16/10" v-fade-in>
+        <FlipCard :aspectRatio="16/10" v-fade-in class="baby-boy">
           <Moment slot="front"
                   :moment="moment('1990-09-27')"
                   display="d">
