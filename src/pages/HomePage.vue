@@ -54,7 +54,7 @@
           </Moment>
           <span slot="back">Ústí nad Orlicí</span>
         </FlipCard>
-        <Card :aspectRatio="11/16" v-fade-in>
+        <Card :aspectRatio="11/16" v-fade-in class="hearts">
           <Duration :from="moment('2009-11-28')"
                     :to="moment()"
                     v-rerender="1000"
