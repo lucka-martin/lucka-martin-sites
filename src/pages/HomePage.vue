@@ -35,7 +35,9 @@
           <span slot="back">Ústí nad Orlicí</span>
         </FlipCard>
         <Card :aspectRatio="11/16" v-fade-in>
-          <span>Gymuo</span>
+          <div>
+            <img src="/static/images/gymuo.png"/>
+          </div>
         </Card>
         <FlipCard :aspectRatio="11/16" v-fade-in>
           <span slot="front">Brno - VUT</span>
