@@ -40,8 +40,12 @@
           </div>
         </Card>
         <FlipCard :aspectRatio="11/16" v-fade-in>
-          <span slot="front">Brno - VUT</span>
-          <span slot="back">Brno - MU</span>
+          <div slot="front">
+            <img src="/static/images/fit.png"/>
+          </div>
+          <div slot="back">
+            <img src="/static/images/fss.png"/>
+          </div>
         </FlipCard>
         <FlipCard :aspectRatio="16/10" v-fade-in>
           <a slot="front" href="detail1.html">FOTO</a>
