@@ -930,7 +930,7 @@
 			display: inline-block;
 			margin: 0 0 .5em;
 			width: 100%;
-			/*overflow: hidden;*/
+			overflow: hidden;
 		}
 
 			.columns img {
@@ -947,6 +947,13 @@
 				-webkit-transform: scale(1.1);
 				-ms-transform: scale(1.1);
 				transform: scale(1.1);
+			}
+
+			.columns div.flip-card-component:hover img {
+				-moz-transform: scale(1.0);
+				-webkit-transform: scale(1.0);
+				-ms-transform: scale(1.0);
+				transform: scale(1.0);
 			}
 
 		@media screen and (max-width: 736px) {

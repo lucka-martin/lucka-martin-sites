@@ -1,5 +1,5 @@
 <template>
-  <div class="card-component fit elevation-2" :style="style">
+  <div class="card-component flip-card-component fit elevation-2" :style="style">
     <div class="card-content">
       <figure class="front">
         <slot name="front" class="front"></slot>

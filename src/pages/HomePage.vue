@@ -61,8 +61,12 @@
                     display="YMDhm"></Duration>
         </Card>
         <FlipCard :aspectRatio="16/10" v-fade-in>
-          <span slot="front">Brno foto</span>
-          <span slot="back">Brno foto</span>
+          <div slot="front">
+            <img src="/static/images/petrov.png"/>
+          </div>
+          <div slot="back">
+            <img src="/static/images/spilas.png"/>
+          </div>
         </FlipCard>
         <FlipCard :aspectRatio="11/16" v-fade-in>
           <span slot="front">Svatba - cas</span>
