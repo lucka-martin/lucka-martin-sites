@@ -1,6 +1,5 @@
 <template>
   <MainLayout>
-    <HomeButton></HomeButton>
     <div id="main">
       <Columns :columns="4" v-cloak>
         <!-- Column 1 (horizontal, vertical, horizontal, vertical) -->
@@ -116,7 +115,6 @@
   import Columns from '@/components/Columns.vue'
   import Duration from '@/components/Duration.vue'
   import FlipCard from '@/components/FlipCard.vue'
-  import HomeButton from '@/components/HomeButton.vue'
   import Moment from '@/components/Moment.vue'
 
   import fadeIn from '@/directives/fadeIn'
@@ -131,7 +129,6 @@
       Columns,
       FlipCard,
       MainLayout,
-      HomeButton,
       Duration,
       Moment
     },

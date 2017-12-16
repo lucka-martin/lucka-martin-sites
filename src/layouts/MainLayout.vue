@@ -1,5 +1,6 @@
 <template>
   <div v-cloak>
+    <HomeButton></HomeButton>
     <main>
       <slot></slot>
     </main>
@@ -14,8 +15,13 @@
 <script lang="ts">
   import Vue from 'vue'
   import Component from 'vue-class-component'
+  import HomeButton from '@/components/HomeButton.vue'
 
-  @Component
+  @Component({
+    components: {
+      HomeButton
+    }
+  })
   export default class MainLayout extends Vue {
   }
 </script>
