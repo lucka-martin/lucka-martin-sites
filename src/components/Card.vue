@@ -38,5 +38,6 @@
     display: flex;
     align-items: center;
     overflow: hidden;
+    background-color: white;
   }
 </style>
