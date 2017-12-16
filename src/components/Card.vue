@@ -39,8 +39,4 @@
     align-items: center;
     overflow: hidden;
   }
-
-  .card-component:hover .card-content {
-    @include transform(scale(1.05));
-  }
 </style>
